@@ -7,8 +7,8 @@ export interface Euser {
 export default interface UserModel extends Document, Euser {}
 
 const schema = new Schema({
-  username: String,
-  password: String,
+  username: { type: String },
+  password: { type: String },
 });
 
 export const User = model<UserModel>("user", schema);
