@@ -2,6 +2,7 @@ import bcrypt from "bcrypt";
 import { User } from "../models/user.model";
 import jwt from "jsonwebtoken";
 import { SECRET_KEY } from "../config/config";
+import ApiError from "../utils/apiError";
 export class Authentication {
   login = async (req: any, res: any, next: any) => {
     try {
@@ -27,7 +28,8 @@ export class Authentication {
           .send({ success: false, message: "Invalid username or password" });
       }
     } catch (error: any) {
-      return res.status(200).send({ success: true, message: error.message });
+      next(error);
+      throw new ApiError(error.status, error.message);
     }
   };
   create = async (req: any, res: any, next: any) => {
@@ -51,7 +53,8 @@ export class Authentication {
         token: token,
       });
     } catch (error: any) {
-      return res.status(500).send({ success: true, message: error.message });
+      next(error);
+      throw new ApiError(error.status, error.message);
     }
   };
 }
