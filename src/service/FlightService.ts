@@ -23,7 +23,7 @@ export class FlightService {
         data: payload,
       };
       return await axios.request(option);
-    } catch (error) {
+    } catch (error: any) {
       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error.message);
     }
   };
@@ -39,7 +39,7 @@ export class FlightService {
         },
       };
       return await axios.request(option);
-    } catch (error) {
+    } catch (error: any) {
       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error.message);
     }
   };
@@ -53,7 +53,7 @@ export class FlightService {
         data: payload,
       };
       return await axios.request(option);
-    } catch (error) {
+    } catch (error: any) {
       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error.message);
     }
   };
@@ -66,7 +66,7 @@ export class FlightService {
         data: payload,
       };
       return await axios.request(option);
-    } catch (error) {
+    } catch (error: any) {
       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error.message);
     }
   };
@@ -79,7 +79,7 @@ export class FlightService {
         data: payload,
       };
       return await axios.request(option);
-    } catch (error) {
+    } catch (error: any) {
       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error.message);
     }
   };
@@ -91,7 +91,7 @@ export class FlightService {
         headers,
       };
       return await axios.request(option);
-    } catch (error) {
+    } catch (error: any) {
       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error.message);
     }
   };
@@ -103,7 +103,7 @@ export class FlightService {
         headers,
       };
       return await axios.request(option);
-    } catch (error) {
+    } catch (error: any) {
       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error.message);
     }
   };
@@ -115,7 +115,7 @@ export class FlightService {
         headers,
       };
       return await axios.request(option);
-    } catch (error) {
+    } catch (error: any) {
       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error.message);
     }
   };

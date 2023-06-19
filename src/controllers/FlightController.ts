@@ -1,4 +1,5 @@
 import { FlightService } from "../service/FlightService";
+import ApiError from "../utils/apiError";
 export class FlightController {
   private _flightService: any;
   constructor() {
@@ -25,7 +26,8 @@ export class FlightController {
         data: response.data,
       });
     } catch (error: any) {
-      return res.status(400).send({ success: true, message: error.message });
+      next(error);
+      throw new ApiError(error.status, error.message);
     }
   };
   pollSearch = async (req: any, res: any, next: any) => {
@@ -37,7 +39,8 @@ export class FlightController {
         data: response.data,
       });
     } catch (error: any) {
-      return res.status(400).send({ success: true, message: error.message });
+      next(error);
+      throw new ApiError(error.status, error.message);
     }
   };
 
@@ -50,7 +53,8 @@ export class FlightController {
         data: response.data,
       });
     } catch (error: any) {
-      return res.status(400).send({ success: true, message: error.message });
+      next(error);
+      throw new ApiError(error.status, error.message);
     }
   };
 
@@ -63,7 +67,8 @@ export class FlightController {
         data: response.data,
       });
     } catch (error: any) {
-      return res.status(400).send({ success: true, message: error.message });
+      next(error);
+      throw new ApiError(error.status, error.message);
     }
   };
   autoSuggestHotels = async (req: any, res: any, next: any) => {
@@ -74,7 +79,8 @@ export class FlightController {
         data: response.data,
       });
     } catch (error: any) {
-      return res.status(400).send({ success: true, message: error.message });
+      next(error);
+      throw new ApiError(error.status, error.message);
     }
   };
 
@@ -88,7 +94,8 @@ export class FlightController {
         data: response.data,
       });
     } catch (error: any) {
-      return res.status(400).send({ success: true, message: error.message });
+      next(error);
+      throw new ApiError(error.status, error.message);
     }
   };
 
@@ -101,7 +108,8 @@ export class FlightController {
         data: response.data,
       });
     } catch (error: any) {
-      return res.status(400).send({ success: true, message: error.message });
+      next(error);
+      throw new ApiError(error.status, error.message);
     }
   };
 
@@ -124,7 +132,8 @@ export class FlightController {
         data: response.data,
       });
     } catch (error: any) {
-      return res.status(400).send({ success: true, message: error.message });
+      next(error);
+      throw new ApiError(error.status, error.message);
     }
   };
 }
