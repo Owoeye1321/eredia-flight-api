@@ -29,7 +29,6 @@ export class Authentication {
       }
     } catch (error: any) {
       next(error);
-      throw new ApiError(error.status, error.message);
     }
   };
   create = async (req: any, res: any, next: any) => {
@@ -54,7 +53,6 @@ export class Authentication {
       });
     } catch (error: any) {
       next(error);
-      throw new ApiError(error.status, error.message);
     }
   };
 }

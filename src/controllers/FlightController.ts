@@ -27,7 +27,6 @@ export class FlightController {
       });
     } catch (error: any) {
       next(error);
-      throw new ApiError(error.status, error.message);
     }
   };
   pollSearch = async (req: any, res: any, next: any) => {
@@ -40,7 +39,6 @@ export class FlightController {
       });
     } catch (error: any) {
       next(error);
-      throw new ApiError(error.status, error.message);
     }
   };
 
@@ -54,7 +52,6 @@ export class FlightController {
       });
     } catch (error: any) {
       next(error);
-      throw new ApiError(error.status, error.message);
     }
   };
 
@@ -68,7 +65,6 @@ export class FlightController {
       });
     } catch (error: any) {
       next(error);
-      throw new ApiError(error.status, error.message);
     }
   };
   autoSuggestHotels = async (req: any, res: any, next: any) => {
@@ -80,7 +76,6 @@ export class FlightController {
       });
     } catch (error: any) {
       next(error);
-      throw new ApiError(error.status, error.message);
     }
   };
 
@@ -95,7 +90,6 @@ export class FlightController {
       });
     } catch (error: any) {
       next(error);
-      throw new ApiError(error.status, error.message);
     }
   };
 
@@ -109,7 +103,6 @@ export class FlightController {
       });
     } catch (error: any) {
       next(error);
-      throw new ApiError(error.status, error.message);
     }
   };
 
@@ -133,7 +126,6 @@ export class FlightController {
       });
     } catch (error: any) {
       next(error);
-      throw new ApiError(error.status, error.message);
     }
   };
 }
